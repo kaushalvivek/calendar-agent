@@ -1,16 +1,42 @@
-# 📅 Calendar Agent
+# 📅 Calendar Agent for Claude Code
 
-An intelligent calendar management system that automates schedule optimization, meeting prioritization, and time blocking. Calendar Agent acts as your personal scheduling assistant, analyzing your calendar patterns and helping you reclaim focus time.
+A natural language calendar assistant that integrates with Claude Code, allowing you to manage your Google Calendar through conversational commands. Simply chat with Claude Code to analyze meetings, find optimal slots, reschedule events, and protect your focus time.
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Claude%20Code-Compatible-purple.svg" alt="Claude Code">
   <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python 3.8+">
   <img src="https://img.shields.io/badge/Google%20Calendar-API%20v3-green.svg" alt="Google Calendar API">
   <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
 </p>
 
-## Why Calendar Agent?
+## 🚀 30-Minute Setup, Lifetime of Productivity
 
-Calendar Agent understands that your time is your most valuable resource. It analyzes your meeting patterns, identifies time wasters, and helps you create meaningful focus blocks for deep work.
+Set up your personal calendar assistant in Claude Code in just 30 minutes, then use natural language to manage your entire schedule.
+
+## 🗣️ Natural Language Commands in Claude Code
+
+Once set up, simply ask Claude Code questions like:
+
+### 📊 Query & Analysis
+- *"How much time did I spend in interviews in the last 4 weeks?"*
+- *"Can you create a table of all 1-on-1s and their current frequency?"*
+- *"What are the heaviest days on my calendar?"*
+- *"Show me all external meetings from last month"*
+
+### 🎯 Tactical Actions
+- *"I need to move meeting ABC due to a conflict. Can you find the next best slot that works for everyone?"*
+- *"Find me 2 hours of focus time tomorrow afternoon"*
+- *"Which meetings can I skip this week to get more deep work done?"*
+
+### 🔧 Actual Changes
+- *"Move meeting ABC to the slot you suggested and send an email apologizing for the late reschedule"*
+- *"Decline all optional meetings for this Friday"*
+- *"Block 3-hour focus windows on Tuesday and Thursday mornings"*
+
+### 📈 Strategic Planning
+- *"If I want to pack four 3-hour windows of focused work each week, what windows would you recommend?"*
+- *"Block these with DNS-focus blocks for the next month"*
+- *"Analyze my meeting patterns and suggest how to optimize my schedule"*
 
 ## ✨ Features
 
@@ -32,15 +58,16 @@ Calendar Agent understands that your time is your most valuable resource. It ana
 - **Smart Defaults** - IST timezone, sensible reminders, intuitive categorization
 - **CLI & API** - Use via command line or integrate programmatically
 
-## 🚀 Quick Start
+## 🚀 Quick Start with Claude Code
 
 ### Prerequisites
 
+- Claude Code desktop app
 - Python 3.8 or higher
 - Google account with Calendar access
 - Google Cloud Project with Calendar API enabled
 
-### Installation
+### Installation for Claude Code
 
 1. **Clone Calendar Agent**
 ```bash
@@ -83,11 +110,24 @@ python -c "from calendar_manager import CalendarManager; CalendarManager()"
 
 ## 📖 Using Calendar Agent
 
+### With Claude Code (Recommended)
+
+Once installed, simply chat with Claude Code using natural language:
+
+```
+You: "How does my calendar look next week?"
+Claude: [Analyzes your calendar and provides insights]
+
+You: "Find me 3 hours for deep work on Wednesday"
+Claude: [Identifies available slots and can create focus blocks]
+
+You: "Reschedule my 2pm meeting to later this week"
+Claude: [Finds optimal times and handles the rescheduling]
+```
+
 ### Command Line Interface
 
-Calendar Agent provides a simple CLI for all operations:
-
-View today's schedule:
+You can also use Calendar Agent directly via CLI:
 ```bash
 python cal_cli.py today
 ```
@@ -179,7 +219,14 @@ end = now.replace(hour=17, minute=0)
 manager.create_focus_block("Strategic Planning", start, end)
 ```
 
-## 🏗️ Architecture
+## 🏗️ How It Works with Claude Code
+
+Calendar Agent seamlessly integrates with Claude Code's natural language processing:
+
+1. **Natural Language Understanding**: Claude Code interprets your calendar requests
+2. **Calendar Agent API**: Executes operations via the Python backend
+3. **Google Calendar Sync**: Direct integration with your Google Calendar
+4. **Intelligent Responses**: Claude Code provides context-aware suggestions
 
 ```
 calendar-agent/
@@ -241,16 +288,39 @@ CRITICAL_KEYWORDS = ['production', 'deploy', 'customer', 'board']
 CANCELABLE_KEYWORDS = ['optional', 'maybe', 'casual']
 ```
 
-## 🎯 How Calendar Agent Helps
+## 🎯 Real-World Examples in Claude Code
 
-### 1. Daily Schedule Optimization
-Start your day by letting Calendar Agent analyze and optimize:
-```bash
-# Morning routine with Calendar Agent
-python cal_cli.py analyze
-python cal_cli.py rank
-# Calendar Agent identifies low-value meetings
-# Create focus blocks for important work
+### Example 1: Interview Analysis
+```
+You: "How much time did I spend in interviews last month?"
+Claude: "You spent 18.5 hours in interviews across 12 sessions last month. 
+        Peak interview days were Tuesdays and Thursdays."
+```
+
+### Example 2: Smart Rescheduling
+```
+You: "I need to move my 3pm sync meeting due to a conflict"
+Claude: "I found 3 available slots that work for all attendees:
+        1. Tomorrow 2:00-2:30 PM
+        2. Thursday 3:30-4:00 PM
+        3. Friday 11:00-11:30 AM
+        Which would you prefer?"
+You: "Let's do Thursday"
+Claude: "Meeting rescheduled to Thursday 3:30 PM. 
+        Email sent to attendees with your apologies."
+```
+
+### Example 3: Focus Time Protection
+```
+You: "I need four 3-hour deep work blocks next week"
+Claude: "Based on your calendar patterns, I recommend:
+        - Monday 9:00 AM-12:00 PM
+        - Tuesday 2:00-5:00 PM
+        - Thursday 9:00 AM-12:00 PM
+        - Friday 1:00-4:00 PM
+        Should I block these as 'Deep Work - Do Not Schedule'?"
+You: "Yes, block them"
+Claude: "✅ Created 4 focus blocks totaling 12 hours of protected time"
 ```
 
 ### 2. Meeting Preparation
