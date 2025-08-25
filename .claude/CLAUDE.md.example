@@ -1,0 +1,42 @@
+# Calendar Preferences Configuration
+
+This file contains your personal calendar preferences and rules.
+Copy this to `CLAUDE.md` and customize for your needs.
+
+## Working Hours
+- Preferred working hours: 9am - 6pm
+- Meetings before 9am are too early
+- Meetings after 6pm require special consideration
+
+## Meeting Preferences
+- Prefer meetings in specific time blocks (e.g., afternoons)
+- Buffer time between back-to-back meetings: 15 minutes
+- Maximum daily meeting hours: 6 hours
+
+## Timezone
+- Default timezone: [Your timezone, e.g., PST, EST, IST]
+- Display all times in this timezone unless specified otherwise
+
+## Calendar Logic
+- Declined meetings should not be counted in schedule analysis
+- Only show accepted or tentative meetings by default
+- Focus blocks are protected time - do not schedule over them
+
+## Company Domains (Optional)
+- List any internal company domains for meeting classification
+- Example: @yourcompany.com, @subsidiary.com
+
+## Meeting Priority Keywords
+- Critical: production, deployment, customer, urgent
+- Important: planning, review, strategy, team
+- Optional: casual, coffee, optional, maybe
+
+## Personal Preferences
+- Lunch break: 12pm - 1pm
+- Deep work blocks: Morning (9-11am) or Evening (4-6pm)
+- No meetings on: [Specific days/times if applicable]
+
+## Custom Rules
+- Add any custom rules for your calendar management
+- Example: "All 1:1s should be at least 30 minutes"
+- Example: "Prefer video calls over in-person for < 30 min meetings"
